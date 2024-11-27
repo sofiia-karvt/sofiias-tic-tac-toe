@@ -20,14 +20,6 @@ export default function Home() {
           height="80"
           priority
         />
-        <div>
-          <h2>Links To Apps:</h2>
-            <a href="/tic-tac-toe"><h3>Tic-Tac-Toe</h3></a>
-            
-            <a href="/nasa"><h3>Nasa API</h3></a>
-            
-            <a href="/design"><h3>Color Wheel</h3></a>
-        </div>
       </div>
     </main>
   );
