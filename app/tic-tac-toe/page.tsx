@@ -1,8 +1,14 @@
 "use client";
-import styles from "./page.module.css";
-import React, { useState } from 'react';
 
-function Square({ value, onSquareClick }) {
+import React, { useState } from "react";
+import styles from "./page.module.css";
+
+interface SquareProps {
+  value: string | null;
+  onSquareClick: () => void;
+}
+
+function Square({ value, onSquareClick }: SquareProps) {
   return (
     <button className="square" onClick={onSquareClick}>
       {value}
@@ -11,18 +17,22 @@ function Square({ value, onSquareClick }) {
 }
 
 export default function Board() {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState<boolean>(true);
+  const [squares, setSquares] = useState<(string | null)[]>(Array(9).fill(null));
   const winner = calculateWinner(squares);
-  let status;
+
+  let status: string;
   if (winner) {
     status = "Winner: " + winner;
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
-  function handleClick(i) {
+
+  function handleClick(i: number) {
     if (squares[i] || calculateWinner(squares)) {
-      return;}
+      return;
+    }
+
     const nextSquares = squares.slice();
     if (xIsNext) {
       nextSquares[i] = "X";
@@ -32,6 +42,7 @@ export default function Board() {
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
+
   return (
     <>
       <div className="status">{status}</div>
@@ -53,7 +64,8 @@ export default function Board() {
     </>
   );
 }
-function calculateWinner(squares) {
+
+function calculateWinner(squares: (string | null)[]): string | null {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -62,7 +74,7 @@ function calculateWinner(squares) {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6]
+    [2, 4, 6],
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
@@ -72,5 +84,3 @@ function calculateWinner(squares) {
   }
   return null;
 }
-
-
