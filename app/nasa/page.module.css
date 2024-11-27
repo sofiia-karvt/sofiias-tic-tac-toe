@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Space between grid items */
+}
+  
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a deeper shadow */
+  border-color: #aaa; /* Optional: Change border color */
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.card:hover .image {
+  transform: scale(1.1); /* Slightly zoom in on the image */
+}
+
+
+.title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.date {
+  font-style: italic;
+  color: gray;
+}
+
+
+.explanation {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

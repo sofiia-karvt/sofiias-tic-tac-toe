@@ -87,7 +87,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1rem;
+  margin-top: 0rem;
   font-family: var(--font-titles);
   font-weight: 500;
   font-optical-sizing: auto;
@@ -176,3 +176,37 @@ fieldset {
     filter: brightness(80%);
   }
 }
+
+/* tic-tac-toe modifications */
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+/* end of tic-tac-toe modifications */

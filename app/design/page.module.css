@@ -1,0 +1,159 @@
+/* Fonts */
+@font-face {
+  font-family: "Jost";
+  src: url("/fonts/Jost/Jost.woff2") format("woff2"),
+       url("/fonts/Jost/Jost.woff") format("woff"),
+       url("/fonts/Jost/Jost.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Logo */
+.logoContainer {
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Error Message */
+.errorMessage {
+  color: rgb(254, 79, 76); /* Red text */
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* Forgot Password */
+.forgotPassword {
+  font-family: "Jost", sans-serif;
+  margin-top: 26px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.486); 
+}
+
+.forgotPassword a {
+  color: rgba(255, 255, 255, 0.587); 
+  text-decoration: underline; /* Underlined */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Card Styling */
+.card {
+  background-color: #1f1f1f; 
+  border-radius: 16px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  color: white;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
+  font-family: "Jost", sans-serif;
+}
+
+/* Title */
+.title {
+  text-align: left;
+}
+
+.title h1 {
+  font-family: "Jost", sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.title p {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: pre-line; /* Keep line breaks */
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  font-family: "Jost", sans-serif;
+}
+
+.mainTitle {
+  font-size: 24px; /* Fixed size for title */
+  font-weight: bold;
+  color: white;
+}
+
+.infoText {
+  margin: 0;
+  font-size: 24px; /* Fixed size for text under title */
+  font-weight: light;
+  white-space: pre-line; /* Keep line breaks */
+}
+
+/* Input Container */
+.inputContainer {
+  margin-top: 10px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Input */
+.input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background-color: #fff;
+  font-size: 16px; /* Fixed size for input text */
+  font-weight: bold;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input:focus {
+  border-color: rgb(254, 119, 214); /* Pink border on focus */
+  box-shadow: 0 0 5px rgba(254, 119, 214, 0.8);
+}
+
+/* Placeholder Text */
+.input::placeholder {
+  color: black; /* Always black placeholder text */
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Input on Typing */
+.input:not(:placeholder-shown) {
+  color: rgb(254, 119, 214); /* Pink text when typing */
+}
+
+/* Error State */
+.inputError {
+  border-color: rgb(254, 79, 76); /* Red border */
+  color: rgb(254, 79, 76); /* Red text */
+}
+
+/* Button */
+.button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 50px;
+  font-size: 16px; /* Fixed size for button text */
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+  
