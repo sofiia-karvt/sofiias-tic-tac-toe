@@ -1,8 +1,8 @@
+# Starter Kit
+
 To view how Color Wheel app looks like if login successed, use:
 EMAIL: 123@gmail.com
 PASSWORD: 123
-
-# Starter Kit
 
 This is a Starter Kit for the Digital Product Jam course. It provides a
 configuration of the [Next.js](https://nextjs.org/) framework, and a number of
